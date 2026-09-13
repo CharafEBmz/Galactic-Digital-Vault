@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift Cards | Galactic Vault</title>
+</head>
+<body>
+
+  <header>
+    <a href="index.html">
+      <img src="images/logo-icon.png" alt="Galactic Vault logo">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="accounts.html">Accounts</a></li>
+        <li><a href="subscriptions.html">Subscriptions</a></li>
+        <li><a href="giftcards.html">Gift Cards</a></li>
+        <li><a href="software.html">Software</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Buy Gift Cards</h1>
+  <p>Get gift cards for your favorite platforms, delivered digitally.</p>
+
+  <ol>
+    <li>Choose a platform, region, and amount</li>
+    <li>We confirm availability and price</li>
+    <li>You pay and receive your code</li>
+  </ol>
+
+  <form>
+
+    <input type="radio" id="googleplay" name="giftcard" value="googleplay" required>
+    <label for="googleplay"><img src="images/googleplay-card.png" alt="Google Play Gift Card"></label>
+
+    <input type="radio" id="itunes" name="giftcard" value="itunes">
+    <label for="itunes"><img src="images/itunes-card.png" alt="iTunes Gift Card"></label>
+
+    <input type="radio" id="playstation" name="giftcard" value="playstation">
+    <label for="playstation"><img src="images/ps-card.png" alt="PlayStation Gift Card"></label>
+
+    <input type="radio" id="steam" name="giftcard" value="steam">
+    <label for="steam"><img src="images/steam-card.png" alt="Steam Gift Card"></label>
+
+    <input type="radio" id="xbox" name="giftcard" value="xbox">
+    <label for="xbox"><img src="images/xbox-card.png" alt="Xbox Gift Card"></label>
+
+    <label for="region">Region</label>
+    <select id="region" name="region" required>
+      <option value="" disabled selected>Choose a region</option>
+      <option value="us">United States</option>
+      <option value="uk">United Kingdom</option>
+      <option value="eu">Europe</option>
+      <option value="france">France</option>
+      <option value="global">Global / Other</option>
+    </select>
+
+    <label for="amount">Amount (USD)</label>
+    <input type="number" id="amount" name="amount" min="1" placeholder="e.g. 25" title="Please enter numbers only" required>
+
+    <label for="payment-method">Payment Method</label>
+    <select id="payment-method" name="payment-method" required>
+      <option value="" disabled selected>Choose a payment method</option>
+      <option value="ccp">CCP</option>
+      <option value="baridimob">BaridiMob</option>
+      <option value="visa">Visa</option>
+    </select>
+
+    <label for="quantity">Quantity</label>
+    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+    <button type="submit">Send Request</button>
+
+  </form>
+
+</body>
+</html>

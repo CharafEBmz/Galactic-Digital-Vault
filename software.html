@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software | Galactic Vault</title>
+</head>
+<body>
+
+  <header>
+    <a href="index.html">
+      <img src="images/logo-icon.png" alt="Galactic Vault logo">
+    </a>
+    <nav>
+      <ul>
+        <li><a href="accounts.html">Accounts</a></li>
+        <li><a href="subscriptions.html">Subscriptions</a></li>
+        <li><a href="giftcards.html">Gift Cards</a></li>
+        <li><a href="software.html">Software</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Software Licenses</h1>
+  <p>Genuine Windows and Office licenses, delivered digitally.</p>
+
+  <ol>
+    <li>Choose your product and edition</li>
+    <li>We confirm price and payment method</li>
+    <li>You receive your license key by email</li>
+  </ol>
+
+  <form>
+
+    <input type="radio" id="windows" name="software" value="windows" required>
+    <label for="windows"><img src="images/windows-card.png" alt="Windows License"></label>
+
+    <input type="radio" id="office" name="software" value="office">
+    <label for="office"><img src="images/office-card.png" alt="Microsoft Office License"></label>
+
+    <label for="edition">Edition / Version</label>
+    <select id="edition" name="edition" required>
+      <option value="" disabled selected>Choose an edition</option>
+      <option value="win10-home">Windows 10 Home</option>
+      <option value="win10-pro">Windows 10 Pro</option>
+      <option value="win11-home">Windows 11 Home</option>
+      <option value="win11-pro">Windows 11 Pro</option>
+      <option value="office2021">Office 2021</option>
+      <option value="office365">Microsoft 365</option>
+    </select>
+
+    <label for="notes">Notes (device info, activation questions, etc.)</label>
+    <textarea id="notes" name="notes" placeholder="e.g. Which PC this is for, current Windows version if upgrading"></textarea>
+
+    <label for="payment-method">Payment Method</label>
+    <select id="payment-method" name="payment-method" required>
+      <option value="" disabled selected>Choose a payment method</option>
+      <option value="ccp">CCP</option>
+      <option value="baridimob">BaridiMob</option>
+      <option value="visa">Visa</option>
+    </select>
+
+    <label for="quantity">Quantity</label>
+    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+
+    <label for="email">Your Email</label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+    <button type="submit">Send Request</button>
+
+  </form>
+
+</body>
+</html>
