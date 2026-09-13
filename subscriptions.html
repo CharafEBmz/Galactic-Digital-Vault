@@ -33,7 +33,8 @@
 
   <p><small>Note on Spotify Trial: only works if your account has never used a Spotify free trial before. Spotify Premium is a real paid month, works on any account.</small></p>
 
-  <form>
+  <form action="https://formspree.io/f/xgaejope" method="POST">
+    <input type="hidden" name="_subject" value="New Subscription Request">
 
     <input type="radio" id="spotify-trial" name="plan" value="spotify-trial" required>
     <label for="spotify-trial"><img src="images/spotify-trial-card.png" alt="Spotify Trial"></label>
@@ -50,7 +51,9 @@
     <input type="radio" id="gamepass-ultimate" name="plan" value="gamepass-ultimate">
     <label for="gamepass-ultimate"><img src="images/gamepass-ultimate-card.png" alt="Xbox Game Pass Ultimate"></label>
 
-    <!-- psplus-essential-card.png still missing from images folder — using psplus-extra only -->
+    <input type="radio" id="psplus-essential" name="plan" value="psplus-essential">
+    <label for="psplus-essential"><img src="images/psplus-essential-card.png" alt="PlayStation Plus Essential"></label>
+
     <input type="radio" id="psplus-extra" name="plan" value="psplus-extra">
     <label for="psplus-extra"><img src="images/psplus-extra-card.png" alt="PlayStation Plus Extra"></label>
 
@@ -95,8 +98,9 @@
     <input type="email" id="email" name="email" placeholder="you@example.com" required>
 
     <button type="submit">Send Request</button>
-
   </form>
+
+  <p>Or just message us on WhatsApp: <a href="https://wa.me/213792556748">Chat with us</a></p>
 
 </body>
 </html>
