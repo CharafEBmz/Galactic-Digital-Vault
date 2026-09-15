@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subscriptions | Galactic Vault</title>
+    <title>Software | Galactic Vault</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
   <header>
-    <a href="index.html">
+    <a href="index.html" class="site-brand">
       <img src="images/logo-icon.png" alt="Galactic Vault logo">
+      <span class="gradient-text">Galactic Vault</span>
     </a>
 
     <nav>
@@ -28,26 +29,18 @@
 
   <main class="container">
 
-    <h1>Subscriptions</h1>
+    <h1>Software Licenses</h1>
 
     <p>
-      Get premium subscriptions at local prices,
-      activated on your own account.
+      Genuine Windows and Office licenses,
+      delivered digitally.
     </p>
 
     <ol>
-      <li>Choose your plan</li>
+      <li>Choose your product and edition</li>
       <li>We confirm price and payment method</li>
-      <li>We activate it directly on your account</li>
+      <li>You receive your license key by email</li>
     </ol>
-
-    <p>
-      <small>
-        Note on Spotify Trial: only works if your account has
-        never used a Spotify free trial before. Spotify Premium
-        is a real paid month and works on any account.
-      </small>
-    </p>
 
 
     <form
@@ -59,262 +52,52 @@
       <input
         type="hidden"
         name="_subject"
-        value="New Subscription Request"
+        value="New Software Request"
       >
 
 
-      <!-- Subscription Products -->
+      <!-- Software Products -->
 
-      <div class="product-grid subscription-grid">
+      <div class="product-grid software-grid">
 
 
-        <!-- Spotify Trial -->
+        <!-- Windows -->
 
         <div class="product-option">
 
           <input
             type="radio"
-            id="spotify-trial"
-            name="plan"
-            value="spotify-trial"
+            id="windows"
+            name="software"
+            value="windows"
             required
           >
 
-          <label for="spotify-trial">
+          <label for="windows">
             <img
-              src="images/spotify-trial-card.png"
-              alt="Spotify Trial"
+              src="images/windows-card.png"
+              alt="Windows License"
             >
           </label>
 
         </div>
 
 
-        <!-- Spotify Premium -->
+        <!-- Office -->
 
         <div class="product-option">
 
           <input
             type="radio"
-            id="spotify-premium"
-            name="plan"
-            value="spotify-premium"
+            id="office"
+            name="software"
+            value="office"
           >
 
-          <label for="spotify-premium">
+          <label for="office">
             <img
-              src="images/spotify-premium-card.png"
-              alt="Spotify Premium"
-            >
-          </label>
-
-        </div>
-
-
-        <!-- Game Pass Essential -->
-
-        <div class="product-option">
-
-          <input
-            type="radio"
-            id="gamepass-essential"
-            name="plan"
-            value="gamepass-essential"
-          >
-
-          <label for="gamepass-essential">
-            <img
-              src="images/gamepass-essential-card.png"
-              alt="Xbox Game Pass Essential"
-            >
-          </label>
-
-        </div>
-
-
-        <!-- Game Pass Premium -->
-
-        <div class="product-option">
-
-          <input
-            type="radio"
-            id="gamepass-premium"
-            name="plan"
-            value="gamepass-premium"
-          >
-
-          <label for="gamepass-premium">
-            <img
-              src="images/gamepass-premium-card.png"
-              alt="Xbox Game Pass Premium"
-            >
-          </label>
-
-        </div>
-
-
-        <!-- Game Pass Ultimate -->
-
-        <div class="product-option">
-
-          <input
-            type="radio"
-            id="gamepass-ultimate"
-            name="plan"
-            value="gamepass-ultimate"
-          >
-
-          <label for="gamepass-ultimate">
-            <img
-              src="images/gamepass-ultimate-card.png"
-              alt="Xbox Game Pass Ultimate"
-            >
-          </label>
-
-        </div>
-
-
-        <!-- PlayStation Plus Essential -->
-
-        <div class="product-option">
-
-          <input
-            type="radio"
-            id="psplus-essential"
-            name="plan"
-            value="psplus-essential"
-          >
-
-          <label for="psplus-essential">
-            <img
-              src="images/psplus-essential-card.png"
-              alt="PlayStation Plus Essential"
-            >
-          </label>
-
-        </div>
-
-
-        <!-- PlayStation Plus Extra -->
-
-        <div class="product-option">
-
-          <input
-            type="radio"
-            id="psplus-extra"
-            name="plan"
-            value="psplus-extra"
-          >
-
-          <label for="psplus-extra">
-            <img
-              src="images/psplus-extra-card.png"
-              alt="PlayStation Plus Extra"
-            >
-          </label>
-
-        </div>
-
-
-        <!-- Snapchat+ -->
-
-        <div class="product-option">
-
-          <input
-            type="radio"
-            id="snapchat-plus"
-            name="plan"
-            value="snapchat-plus"
-          >
-
-          <label for="snapchat-plus">
-            <img
-              src="images/snapchat-plus-card.png"
-              alt="Snapchat+"
-            >
-          </label>
-
-        </div>
-
-
-        <!-- Claude -->
-
-        <div class="product-option">
-
-          <input
-            type="radio"
-            id="claude"
-            name="plan"
-            value="claude"
-          >
-
-          <label for="claude">
-            <img
-              src="images/claude-card.png"
-              alt="Claude AI"
-            >
-          </label>
-
-        </div>
-
-
-        <!-- Canva -->
-
-        <div class="product-option">
-
-          <input
-            type="radio"
-            id="canva"
-            name="plan"
-            value="canva"
-          >
-
-          <label for="canva">
-            <img
-              src="images/canva-card.png"
-              alt="Canva Pro"
-            >
-          </label>
-
-        </div>
-
-
-        <!-- ChatGPT -->
-
-        <div class="product-option">
-
-          <input
-            type="radio"
-            id="chatgpt"
-            name="plan"
-            value="chatgpt"
-          >
-
-          <label for="chatgpt">
-            <img
-              src="images/chatgpt-card.png"
-              alt="ChatGPT Plus"
-            >
-          </label>
-
-        </div>
-
-
-        <!-- Gemini -->
-
-        <div class="product-option">
-
-          <input
-            type="radio"
-            id="gemini"
-            name="plan"
-            value="gemini"
-          >
-
-          <label for="gemini">
-            <img
-              src="images/gemini-card.png"
-              alt="Google Gemini"
+              src="images/office-card.png"
+              alt="Microsoft Office License"
             >
           </label>
 
@@ -327,47 +110,54 @@
 
       <div class="form-fields">
 
-        <label for="duration">
-          Duration
+        <label for="edition">
+          Edition / Version
         </label>
 
         <select
-          id="duration"
-          name="duration"
+          id="edition"
+          name="edition"
           required
         >
           <option value="" disabled selected>
-            Choose a duration
+            Choose an edition
           </option>
 
-          <option value="1">
-            1 Month
+          <option value="win10-home">
+            Windows 10 Home
           </option>
 
-          <option value="3">
-            3 Months
+          <option value="win10-pro">
+            Windows 10 Pro
           </option>
 
-          <option value="6">
-            6 Months
+          <option value="win11-home">
+            Windows 11 Home
           </option>
 
-          <option value="9">
-            9 Months
+          <option value="win11-pro">
+            Windows 11 Pro
           </option>
 
-          <option value="12">
-            12 Months
+          <option value="office2021">
+            Office 2021
+          </option>
+
+          <option value="office365">
+            Microsoft 365
           </option>
         </select>
 
 
-        <p>
-          <small>
-            Not all durations apply to every plan —
-            we'll confirm availability when we reply.
-          </small>
-        </p>
+        <label for="notes">
+          Notes
+        </label>
+
+        <textarea
+          id="notes"
+          name="notes"
+          placeholder="e.g. Which PC this is for, current Windows version if upgrading"
+        ></textarea>
 
 
         <label for="payment-method">
@@ -435,7 +225,7 @@
   </main>
 
 
-  <a
+  
     href="https://wa.me/213792556748"
     class="floating-contact"
     target="_blank"
