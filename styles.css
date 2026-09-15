@@ -114,15 +114,25 @@ header::after {
   );
 }
 
-header > a {
+/* ---------- Header Brand ---------- */
+
+.site-brand {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
-header img {
+.site-brand img {
   display: block;
-  width: auto;
+  width: 36px;
   height: 36px;
+  object-fit: contain;
+}
+
+.site-brand .gradient-text {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
 }
 
 
@@ -688,19 +698,7 @@ input[type="radio"]:checked
   padding-top: 42px;
 }
 
-.home-intro {
-  margin-bottom: 38px;
-}
-
-.home-intro h1 {
-  margin-bottom: 10px;
-}
-
-.home-intro p {
-  max-width: 850px;
-
-  color: var(--text-muted);
-}
+/* The homepage title is now part of the header brand. */
 
 
 /* ---------- Home Banner ---------- */
@@ -1036,14 +1034,6 @@ input[type="radio"]:checked
 
   .home-page {
     padding-top: 32px;
-  }
-
-  .home-intro {
-    margin-bottom: 28px;
-  }
-
-  .home-intro h1 {
-    font-size: 2.3rem;
   }
 
   .home-banner {
