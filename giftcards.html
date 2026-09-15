@@ -4,82 +4,297 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gift Cards | Galactic Vault</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
   <header>
     <a href="index.html">
       <img src="images/logo-icon.png" alt="Galactic Vault logo">
     </a>
+
     <nav>
       <ul>
         <li><a href="accounts.html">Accounts</a></li>
         <li><a href="subscriptions.html">Subscriptions</a></li>
         <li><a href="giftcards.html">Gift Cards</a></li>
         <li><a href="software.html">Software</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="links.html">Links</a></li>
       </ul>
     </nav>
   </header>
 
-  <h1>Buy Gift Cards</h1>
-  <p>Get gift cards for your favorite platforms, delivered digitally.</p>
 
-  <ol>
-    <li>Choose a platform, region, and amount</li>
-    <li>We confirm availability and price</li>
-    <li>You pay and receive your code</li>
-  </ol>
+  <main class="container">
 
-  <form action="https://formspree.io/f/xgaejope" method="POST">
-    <input type="hidden" name="_subject" value="New Gift Card Request">
+    <h1>Buy Gift Cards</h1>
 
-    <input type="radio" id="googleplay" name="giftcard" value="googleplay" required>
-    <label for="googleplay"><img src="images/googleplay-card.png" alt="Google Play Gift Card"></label>
+    <p>
+      Get gift cards for your favorite platforms,
+      delivered digitally.
+    </p>
 
-    <input type="radio" id="itunes" name="giftcard" value="itunes">
-    <label for="itunes"><img src="images/itunes-card.png" alt="iTunes Gift Card"></label>
+    <ol>
+      <li>Choose a platform, region, and amount</li>
+      <li>We confirm availability and price</li>
+      <li>You pay and receive your code</li>
+    </ol>
 
-    <input type="radio" id="playstation" name="giftcard" value="playstation">
-    <label for="playstation"><img src="images/ps-card.png" alt="PlayStation Gift Card"></label>
 
-    <input type="radio" id="steam" name="giftcard" value="steam">
-    <label for="steam"><img src="images/steam-card.png" alt="Steam Gift Card"></label>
+    <form
+      class="product-form"
+      action="https://formspree.io/f/xgaejope"
+      method="POST"
+    >
 
-    <input type="radio" id="xbox" name="giftcard" value="xbox">
-    <label for="xbox"><img src="images/xbox-card.png" alt="Xbox Gift Card"></label>
+      <input
+        type="hidden"
+        name="_subject"
+        value="New Gift Card Request"
+      >
 
-    <label for="region">Region</label>
-    <select id="region" name="region" required>
-      <option value="" disabled selected>Choose a region</option>
-      <option value="us">United States</option>
-      <option value="uk">United Kingdom</option>
-      <option value="eu">Europe</option>
-      <option value="france">France</option>
-      <option value="global">Global / Other</option>
-    </select>
 
-    <label for="amount">Amount (USD)</label>
-    <input type="number" id="amount" name="amount" min="1" placeholder="e.g. 25" title="Please enter numbers only" required>
+      <!-- Gift Cards -->
 
-    <label for="payment-method">Payment Method</label>
-    <select id="payment-method" name="payment-method" required>
-      <option value="" disabled selected>Choose a payment method</option>
-      <option value="ccp">CCP</option>
-      <option value="baridimob">BaridiMob</option>
-      <option value="visa">Visa</option>
-    </select>
+      <div class="product-grid giftcard-grid">
 
-    <label for="quantity">Quantity</label>
-    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
 
-    <label for="email">Your Email</label>
-    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        <!-- Google Play -->
 
-    <button type="submit">Send Request</button>
-  </form>
+        <div class="product-option">
 
-  <p>Or just message us on WhatsApp: <a href="https://wa.me/213792556748">Chat with us</a></p>
+          <input
+            type="radio"
+            id="googleplay"
+            name="giftcard"
+            value="googleplay"
+            required
+          >
+
+          <label for="googleplay">
+            <img
+              src="images/googleplay-card.png"
+              alt="Google Play Gift Card"
+            >
+          </label>
+
+        </div>
+
+
+        <!-- iTunes -->
+
+        <div class="product-option">
+
+          <input
+            type="radio"
+            id="itunes"
+            name="giftcard"
+            value="itunes"
+          >
+
+          <label for="itunes">
+            <img
+              src="images/itunes-card.png"
+              alt="iTunes Gift Card"
+            >
+          </label>
+
+        </div>
+
+
+        <!-- PlayStation -->
+
+        <div class="product-option">
+
+          <input
+            type="radio"
+            id="playstation"
+            name="giftcard"
+            value="playstation"
+          >
+
+          <label for="playstation">
+            <img
+              src="images/ps-card.png"
+              alt="PlayStation Gift Card"
+            >
+          </label>
+
+        </div>
+
+
+        <!-- Steam -->
+
+        <div class="product-option">
+
+          <input
+            type="radio"
+            id="steam"
+            name="giftcard"
+            value="steam"
+          >
+
+          <label for="steam">
+            <img
+              src="images/steam-card.png"
+              alt="Steam Gift Card"
+            >
+          </label>
+
+        </div>
+
+
+        <!-- Xbox -->
+
+        <div class="product-option">
+
+          <input
+            type="radio"
+            id="xbox"
+            name="giftcard"
+            value="xbox"
+          >
+
+          <label for="xbox">
+            <img
+              src="images/xbox-card.png"
+              alt="Xbox Gift Card"
+            >
+          </label>
+
+        </div>
+
+      </div>
+
+
+      <!-- Form Fields -->
+
+      <div class="form-fields">
+
+        <label for="region">
+          Region
+        </label>
+
+        <select
+          id="region"
+          name="region"
+          required
+        >
+          <option value="" disabled selected>
+            Choose a region
+          </option>
+
+          <option value="us">
+            United States
+          </option>
+
+          <option value="uk">
+            United Kingdom
+          </option>
+
+          <option value="eu">
+            Europe
+          </option>
+
+          <option value="france">
+            France
+          </option>
+
+          <option value="global">
+            Global / Other
+          </option>
+        </select>
+
+
+        <label for="amount">
+          Amount (USD)
+        </label>
+
+        <input
+          type="number"
+          id="amount"
+          name="amount"
+          min="1"
+          placeholder="e.g. 25"
+          title="Please enter numbers only"
+          required
+        >
+
+
+        <label for="payment-method">
+          Payment Method
+        </label>
+
+        <select
+          id="payment-method"
+          name="payment-method"
+          required
+        >
+          <option value="" disabled selected>
+            Choose a payment method
+          </option>
+
+          <option value="ccp">
+            CCP
+          </option>
+
+          <option value="baridimob">
+            BaridiMob
+          </option>
+
+          <option value="visa">
+            Visa
+          </option>
+        </select>
+
+
+        <label for="quantity">
+          Quantity
+        </label>
+
+        <input
+          type="number"
+          id="quantity"
+          name="quantity"
+          min="1"
+          value="1"
+          required
+        >
+
+
+        <label for="email">
+          Your Email
+        </label>
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          required
+        >
+
+
+        <button type="submit">
+          Send Request
+        </button>
+
+      </div>
+
+    </form>
+
+  </main>
+
+
+  <a
+    href="https://wa.me/213792556748"
+    class="floating-contact"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    💬 Chat with us
+  </a>
 
 </body>
 </html>

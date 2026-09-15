@@ -4,86 +4,276 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accounts | Galactic Vault</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
   <header>
     <a href="index.html">
       <img src="images/logo-icon.png" alt="Galactic Vault logo">
     </a>
+
     <nav>
       <ul>
         <li><a href="accounts.html">Accounts</a></li>
         <li><a href="subscriptions.html">Subscriptions</a></li>
         <li><a href="giftcards.html">Gift Cards</a></li>
         <li><a href="software.html">Software</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="links.html">Links</a></li>
       </ul>
     </nav>
   </header>
 
-  <h1>Game Accounts</h1>
-  <p>Steam and Epic Games accounts, pre-loaded with the game you want.</p>
 
-  <ol>
-    <li>Choose your platform and game</li>
-    <li>We confirm availability and price</li>
-    <li>We deliver your account details securely</li>
-  </ol>
+  <main class="container">
 
-  <form action="https://formspree.io/f/xgaejope" method="POST">
-    <input type="hidden" name="_subject" value="New Accounts Request">
+    <h1>Game Accounts</h1>
 
-    <input type="radio" id="platform-steam" name="platform" value="steam" required>
-    <label for="platform-steam"><img src="images/steam-accounts-banner.png" alt="Steam Game Accounts"></label>
+    <p>
+      Steam and Epic Games accounts, pre-loaded with the game you want.
+    </p>
 
-    <input type="radio" id="platform-epic" name="platform" value="epic">
-    <label for="platform-epic"><img src="images/epic-accounts-banner.png" alt="Epic Games Accounts"></label>
+    <ol>
+      <li>Choose your platform and game</li>
+      <li>We confirm availability and price</li>
+      <li>We deliver your account details securely</li>
+    </ol>
 
-    <label for="game">Game</label>
-    <select id="game" name="game" required>
-      <option value="" disabled selected>Choose a game</option>
-      <optgroup label="Steam">
-        <option value="steam-arcraiders">Arc Raiders</option>
-        <option value="steam-fc26">EA Sports FC 26</option>
-        <option value="steam-crimsondesert">Crimson Desert</option>
-        <option value="steam-cyberpunk">Cyberpunk 2077</option>
-        <option value="steam-codbo7">Call of Duty: Black Ops 7</option>
-        <option value="steam-bf6">Battlefield 6</option>
-        <option value="steam-seaofthieves">Sea of Thieves</option>
-        <option value="steam-dirtrally2">Dirt Rally 2.0</option>
-      </optgroup>
-      <optgroup label="Epic Games">
-        <option value="epic-hogwarts">Hogwarts Legacy</option>
-        <option value="epic-deadisland2">Dead Island 2</option>
-        <option value="epic-dbd">Dead by Daylight</option>
-        <option value="epic-fc26">EA Sports FC 26</option>
-        <option value="epic-tlou">The Last of Us Part I</option>
-        <option value="epic-godofwar">God of War</option>
-        <option value="epic-spiderman">Marvel's Spider-Man Remastered</option>
-      </optgroup>
-    </select>
 
-    <p>Don't see the game you're looking for? <a href="contact.html">Contact us</a> to check availability.</p>
+    <form
+      class="product-form"
+      action="https://formspree.io/f/xgaejope"
+      method="POST"
+    >
 
-    <label for="payment-method">Payment Method</label>
-    <select id="payment-method" name="payment-method" required>
-      <option value="" disabled selected>Choose a payment method</option>
-      <option value="ccp">CCP</option>
-      <option value="baridimob">BaridiMob</option>
-      <option value="visa">Visa</option>
-    </select>
+      <input
+        type="hidden"
+        name="_subject"
+        value="New Accounts Request"
+      >
 
-    <label for="quantity">Quantity</label>
-    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
 
-    <label for="email">Your Email</label>
-    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      <!-- Account Platforms -->
 
-    <button type="submit">Send Request</button>
-  </form>
+      <div class="product-grid accounts-grid">
 
-  <p>Or just message us on WhatsApp: <a href="https://wa.me/213792556748">Chat with us</a></p>
+
+        <!-- Steam -->
+
+        <div class="product-option">
+
+          <input
+            type="radio"
+            id="platform-steam"
+            name="platform"
+            value="steam"
+            required
+          >
+
+          <label for="platform-steam">
+            <img
+              src="images/steam-accounts-banner.png"
+              alt="Steam Game Accounts"
+            >
+          </label>
+
+        </div>
+
+
+        <!-- Epic Games -->
+
+        <div class="product-option">
+
+          <input
+            type="radio"
+            id="platform-epic"
+            name="platform"
+            value="epic"
+          >
+
+          <label for="platform-epic">
+            <img
+              src="images/epic-accounts-banner.png"
+              alt="Epic Games Accounts"
+            >
+          </label>
+
+        </div>
+
+      </div>
+
+
+      <!-- Form Fields -->
+
+      <div class="form-fields">
+
+        <label for="game">
+          Game
+        </label>
+
+        <select
+          id="game"
+          name="game"
+          required
+        >
+          <option value="" disabled selected>
+            Choose a game
+          </option>
+
+          <optgroup label="Steam">
+            <option value="steam-arcraiders">
+              Arc Raiders
+            </option>
+
+            <option value="steam-fc26">
+              EA Sports FC 26
+            </option>
+
+            <option value="steam-crimsondesert">
+              Crimson Desert
+            </option>
+
+            <option value="steam-cyberpunk">
+              Cyberpunk 2077
+            </option>
+
+            <option value="steam-codbo7">
+              Call of Duty: Black Ops 7
+            </option>
+
+            <option value="steam-bf6">
+              Battlefield 6
+            </option>
+
+            <option value="steam-seaofthieves">
+              Sea of Thieves
+            </option>
+
+            <option value="steam-dirtrally2">
+              Dirt Rally 2.0
+            </option>
+          </optgroup>
+
+          <optgroup label="Epic Games">
+            <option value="epic-hogwarts">
+              Hogwarts Legacy
+            </option>
+
+            <option value="epic-deadisland2">
+              Dead Island 2
+            </option>
+
+            <option value="epic-dbd">
+              Dead by Daylight
+            </option>
+
+            <option value="epic-fc26">
+              EA Sports FC 26
+            </option>
+
+            <option value="epic-tlou">
+              The Last of Us Part I
+            </option>
+
+            <option value="epic-godofwar">
+              God of War
+            </option>
+
+            <option value="epic-spiderman">
+              Marvel's Spider-Man Remastered
+            </option>
+          </optgroup>
+
+        </select>
+
+
+        <p>
+          Don't see the game you're looking for?
+          <a
+            href="https://wa.me/213792556748"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Message us on WhatsApp
+          </a>
+          to check availability.
+        </p>
+
+
+        <label for="payment-method">
+          Payment Method
+        </label>
+
+        <select
+          id="payment-method"
+          name="payment-method"
+          required
+        >
+          <option value="" disabled selected>
+            Choose a payment method
+          </option>
+
+          <option value="ccp">
+            CCP
+          </option>
+
+          <option value="baridimob">
+            BaridiMob
+          </option>
+
+          <option value="visa">
+            Visa
+          </option>
+        </select>
+
+
+        <label for="quantity">
+          Quantity
+        </label>
+
+        <input
+          type="number"
+          id="quantity"
+          name="quantity"
+          min="1"
+          value="1"
+          required
+        >
+
+
+        <label for="email">
+          Your Email
+        </label>
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          required
+        >
+
+
+        <button type="submit">
+          Send Request
+        </button>
+
+      </div>
+
+    </form>
+
+  </main>
+
+
+  <a
+    href="https://wa.me/213792556748"
+    class="floating-contact"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    💬 Chat with us
+  </a>
 
 </body>
 </html>

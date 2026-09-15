@@ -4,103 +4,445 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subscriptions | Galactic Vault</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
   <header>
     <a href="index.html">
       <img src="images/logo-icon.png" alt="Galactic Vault logo">
     </a>
+
     <nav>
       <ul>
         <li><a href="accounts.html">Accounts</a></li>
         <li><a href="subscriptions.html">Subscriptions</a></li>
         <li><a href="giftcards.html">Gift Cards</a></li>
         <li><a href="software.html">Software</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="links.html">Links</a></li>
       </ul>
     </nav>
   </header>
 
-  <h1>Subscriptions</h1>
-  <p>Get premium subscriptions at local prices, activated on your own account.</p>
 
-  <ol>
-    <li>Choose your plan</li>
-    <li>We confirm price and payment method</li>
-    <li>We activate it directly on your account</li>
-  </ol>
+  <main class="container">
 
-  <p><small>Note on Spotify Trial: only works if your account has never used a Spotify free trial before. Spotify Premium is a real paid month, works on any account.</small></p>
+    <h1>Subscriptions</h1>
 
-  <form action="https://formspree.io/f/xgaejope" method="POST">
-    <input type="hidden" name="_subject" value="New Subscription Request">
+    <p>
+      Get premium subscriptions at local prices,
+      activated on your own account.
+    </p>
 
-    <input type="radio" id="spotify-trial" name="plan" value="spotify-trial" required>
-    <label for="spotify-trial"><img src="images/spotify-trial-card.png" alt="Spotify Trial"></label>
+    <ol>
+      <li>Choose your plan</li>
+      <li>We confirm price and payment method</li>
+      <li>We activate it directly on your account</li>
+    </ol>
 
-    <input type="radio" id="spotify-premium" name="plan" value="spotify-premium">
-    <label for="spotify-premium"><img src="images/spotify-premium-card.png" alt="Spotify Premium"></label>
+    <p>
+      <small>
+        Note on Spotify Trial: only works if your account has
+        never used a Spotify free trial before. Spotify Premium
+        is a real paid month and works on any account.
+      </small>
+    </p>
 
-    <input type="radio" id="gamepass-essential" name="plan" value="gamepass-essential">
-    <label for="gamepass-essential"><img src="images/gamepass-essential-card.png" alt="Xbox Game Pass Essential"></label>
 
-    <input type="radio" id="gamepass-premium" name="plan" value="gamepass-premium">
-    <label for="gamepass-premium"><img src="images/gamepass-premium-card.png" alt="Xbox Game Pass Premium"></label>
+    <form
+      class="product-form"
+      action="https://formspree.io/f/xgaejope"
+      method="POST"
+    >
 
-    <input type="radio" id="gamepass-ultimate" name="plan" value="gamepass-ultimate">
-    <label for="gamepass-ultimate"><img src="images/gamepass-ultimate-card.png" alt="Xbox Game Pass Ultimate"></label>
+      <input
+        type="hidden"
+        name="_subject"
+        value="New Subscription Request"
+      >
 
-    <input type="radio" id="psplus-essential" name="plan" value="psplus-essential">
-    <label for="psplus-essential"><img src="images/psplus-essential-card.png" alt="PlayStation Plus Essential"></label>
 
-    <input type="radio" id="psplus-extra" name="plan" value="psplus-extra">
-    <label for="psplus-extra"><img src="images/psplus-extra-card.png" alt="PlayStation Plus Extra"></label>
+      <!-- Subscription Products -->
 
-    <input type="radio" id="snapchat-plus" name="plan" value="snapchat-plus">
-    <label for="snapchat-plus"><img src="images/snapchat-plus-card.png" alt="Snapchat+"></label>
+      <div class="product-grid subscription-grid">
 
-    <input type="radio" id="claude" name="plan" value="claude">
-    <label for="claude"><img src="images/claude-card.png" alt="Claude AI"></label>
 
-    <input type="radio" id="canva" name="plan" value="canva">
-    <label for="canva"><img src="images/canva-card.png" alt="Canva Pro"></label>
+        <!-- Spotify Trial -->
 
-    <input type="radio" id="chatgpt" name="plan" value="chatgpt">
-    <label for="chatgpt"><img src="images/chatgpt-card.png" alt="ChatGPT Plus"></label>
+        <div class="product-option">
 
-    <input type="radio" id="gemini" name="plan" value="gemini">
-    <label for="gemini"><img src="images/gemini-card.png" alt="Google Gemini"></label>
+          <input
+            type="radio"
+            id="spotify-trial"
+            name="plan"
+            value="spotify-trial"
+            required
+          >
 
-    <label for="duration">Duration</label>
-    <select id="duration" name="duration" required>
-      <option value="" disabled selected>Choose a duration</option>
-      <option value="1">1 Month</option>
-      <option value="3">3 Months</option>
-      <option value="6">6 Months</option>
-      <option value="9">9 Months</option>
-      <option value="12">12 Months</option>
-    </select>
-    <p><small>Not all durations apply to every plan — we'll confirm availability when we reply.</small></p>
+          <label for="spotify-trial">
+            <img
+              src="images/spotify-trial-card.png"
+              alt="Spotify Trial"
+            >
+          </label>
 
-    <label for="payment-method">Payment Method</label>
-    <select id="payment-method" name="payment-method" required>
-      <option value="" disabled selected>Choose a payment method</option>
-      <option value="ccp">CCP</option>
-      <option value="baridimob">BaridiMob</option>
-      <option value="visa">Visa</option>
-    </select>
+        </div>
 
-    <label for="quantity">Quantity</label>
-    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
 
-    <label for="email">Your Email</label>
-    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        <!-- Spotify Premium -->
 
-    <button type="submit">Send Request</button>
-  </form>
+        <div class="product-option">
 
-  <p>Or just message us on WhatsApp: <a href="https://wa.me/213792556748">Chat with us</a></p>
+          <input
+            type="radio"
+            id="spotify-premium"
+            name="plan"
+            value="spotify-premium"
+          >
+
+          <label for="spotify-premium">
+            <img
+              src="images/spotify-premium-card.png"
+              alt="Spotify Premium"
+            >
+          </label>
+
+        </div>
+
+
+        <!-- Game Pass Essential -->
+
+        <div class="product-option">
+
+          <input
+            type="radio"
+            id="gamepass-essential"
+            name="plan"
+            value="gamepass-essential"
+          >
+
+          <label for="gamepass-essential">
+            <img
+              src="images/gamepass-essential-card.png"
+              alt="Xbox Game Pass Essential"
+            >
+          </label>
+
+        </div>
+
+
+        <!-- Game Pass Premium -->
+
+        <div class="product-option">
+
+          <input
+            type="radio"
+            id="gamepass-premium"
+            name="plan"
+            value="gamepass-premium"
+          >
+
+          <label for="gamepass-premium">
+            <img
+              src="images/gamepass-premium-card.png"
+              alt="Xbox Game Pass Premium"
+            >
+          </label>
+
+        </div>
+
+
+        <!-- Game Pass Ultimate -->
+
+        <div class="product-option">
+
+          <input
+            type="radio"
+            id="gamepass-ultimate"
+            name="plan"
+            value="gamepass-ultimate"
+          >
+
+          <label for="gamepass-ultimate">
+            <img
+              src="images/gamepass-ultimate-card.png"
+              alt="Xbox Game Pass Ultimate"
+            >
+          </label>
+
+        </div>
+
+
+        <!-- PlayStation Plus Essential -->
+
+        <div class="product-option">
+
+          <input
+            type="radio"
+            id="psplus-essential"
+            name="plan"
+            value="psplus-essential"
+          >
+
+          <label for="psplus-essential">
+            <img
+              src="images/psplus-essential-card.png"
+              alt="PlayStation Plus Essential"
+            >
+          </label>
+
+        </div>
+
+
+        <!-- PlayStation Plus Extra -->
+
+        <div class="product-option">
+
+          <input
+            type="radio"
+            id="psplus-extra"
+            name="plan"
+            value="psplus-extra"
+          >
+
+          <label for="psplus-extra">
+            <img
+              src="images/psplus-extra-card.png"
+              alt="PlayStation Plus Extra"
+            >
+          </label>
+
+        </div>
+
+
+        <!-- Snapchat+ -->
+
+        <div class="product-option">
+
+          <input
+            type="radio"
+            id="snapchat-plus"
+            name="plan"
+            value="snapchat-plus"
+          >
+
+          <label for="snapchat-plus">
+            <img
+              src="images/snapchat-plus-card.png"
+              alt="Snapchat+"
+            >
+          </label>
+
+        </div>
+
+
+        <!-- Claude -->
+
+        <div class="product-option">
+
+          <input
+            type="radio"
+            id="claude"
+            name="plan"
+            value="claude"
+          >
+
+          <label for="claude">
+            <img
+              src="images/claude-card.png"
+              alt="Claude AI"
+            >
+          </label>
+
+        </div>
+
+
+        <!-- Canva -->
+
+        <div class="product-option">
+
+          <input
+            type="radio"
+            id="canva"
+            name="plan"
+            value="canva"
+          >
+
+          <label for="canva">
+            <img
+              src="images/canva-card.png"
+              alt="Canva Pro"
+            >
+          </label>
+
+        </div>
+
+
+        <!-- ChatGPT -->
+
+        <div class="product-option">
+
+          <input
+            type="radio"
+            id="chatgpt"
+            name="plan"
+            value="chatgpt"
+          >
+
+          <label for="chatgpt">
+            <img
+              src="images/chatgpt-card.png"
+              alt="ChatGPT Plus"
+            >
+          </label>
+
+        </div>
+
+
+        <!-- Gemini -->
+
+        <div class="product-option">
+
+          <input
+            type="radio"
+            id="gemini"
+            name="plan"
+            value="gemini"
+          >
+
+          <label for="gemini">
+            <img
+              src="images/gemini-card.png"
+              alt="Google Gemini"
+            >
+          </label>
+
+        </div>
+
+      </div>
+
+
+      <!-- Form Fields -->
+
+      <div class="form-fields">
+
+        <label for="duration">
+          Duration
+        </label>
+
+        <select
+          id="duration"
+          name="duration"
+          required
+        >
+          <option value="" disabled selected>
+            Choose a duration
+          </option>
+
+          <option value="1">
+            1 Month
+          </option>
+
+          <option value="3">
+            3 Months
+          </option>
+
+          <option value="6">
+            6 Months
+          </option>
+
+          <option value="9">
+            9 Months
+          </option>
+
+          <option value="12">
+            12 Months
+          </option>
+        </select>
+
+
+        <p>
+          <small>
+            Not all durations apply to every plan —
+            we'll confirm availability when we reply.
+          </small>
+        </p>
+
+
+        <label for="payment-method">
+          Payment Method
+        </label>
+
+        <select
+          id="payment-method"
+          name="payment-method"
+          required
+        >
+          <option value="" disabled selected>
+            Choose a payment method
+          </option>
+
+          <option value="ccp">
+            CCP
+          </option>
+
+          <option value="baridimob">
+            BaridiMob
+          </option>
+
+          <option value="visa">
+            Visa
+          </option>
+        </select>
+
+
+        <label for="quantity">
+          Quantity
+        </label>
+
+        <input
+          type="number"
+          id="quantity"
+          name="quantity"
+          min="1"
+          value="1"
+          required
+        >
+
+
+        <label for="email">
+          Your Email
+        </label>
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          required
+        >
+
+
+        <button type="submit">
+          Send Request
+        </button>
+
+      </div>
+
+    </form>
+
+  </main>
+
+
+  <a
+    href="https://wa.me/213792556748"
+    class="floating-contact"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    💬 Chat with us
+  </a>
 
 </body>
 </html>

@@ -4,74 +4,234 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Software | Galactic Vault</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
   <header>
     <a href="index.html">
       <img src="images/logo-icon.png" alt="Galactic Vault logo">
     </a>
+
     <nav>
       <ul>
         <li><a href="accounts.html">Accounts</a></li>
         <li><a href="subscriptions.html">Subscriptions</a></li>
         <li><a href="giftcards.html">Gift Cards</a></li>
         <li><a href="software.html">Software</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="links.html">Links</a></li>
       </ul>
     </nav>
   </header>
 
-  <h1>Software Licenses</h1>
-  <p>Genuine Windows and Office licenses, delivered digitally.</p>
 
-  <ol>
-    <li>Choose your product and edition</li>
-    <li>We confirm price and payment method</li>
-    <li>You receive your license key by email</li>
-  </ol>
+  <main class="container">
 
-  <form action="https://formspree.io/f/xgaejope" method="POST">
-    <input type="hidden" name="_subject" value="New Software Request">
+    <h1>Software Licenses</h1>
 
-    <input type="radio" id="windows" name="software" value="windows" required>
-    <label for="windows"><img src="images/windows-card.png" alt="Windows License"></label>
+    <p>
+      Genuine Windows and Office licenses,
+      delivered digitally.
+    </p>
 
-    <input type="radio" id="office" name="software" value="office">
-    <label for="office"><img src="images/office-card.png" alt="Microsoft Office License"></label>
+    <ol>
+      <li>Choose your product and edition</li>
+      <li>We confirm price and payment method</li>
+      <li>You receive your license key by email</li>
+    </ol>
 
-    <label for="edition">Edition / Version</label>
-    <select id="edition" name="edition" required>
-      <option value="" disabled selected>Choose an edition</option>
-      <option value="win10-home">Windows 10 Home</option>
-      <option value="win10-pro">Windows 10 Pro</option>
-      <option value="win11-home">Windows 11 Home</option>
-      <option value="win11-pro">Windows 11 Pro</option>
-      <option value="office2021">Office 2021</option>
-      <option value="office365">Microsoft 365</option>
-    </select>
 
-    <label for="notes">Notes (device info, activation questions, etc.)</label>
-    <textarea id="notes" name="notes" placeholder="e.g. Which PC this is for, current Windows version if upgrading"></textarea>
+    <form
+      class="product-form"
+      action="https://formspree.io/f/xgaejope"
+      method="POST"
+    >
 
-    <label for="payment-method">Payment Method</label>
-    <select id="payment-method" name="payment-method" required>
-      <option value="" disabled selected>Choose a payment method</option>
-      <option value="ccp">CCP</option>
-      <option value="baridimob">BaridiMob</option>
-      <option value="visa">Visa</option>
-    </select>
+      <input
+        type="hidden"
+        name="_subject"
+        value="New Software Request"
+      >
 
-    <label for="quantity">Quantity</label>
-    <input type="number" id="quantity" name="quantity" min="1" value="1" required>
 
-    <label for="email">Your Email</label>
-    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      <!-- Software Products -->
 
-    <button type="submit">Send Request</button>
-  </form>
+      <div class="product-grid software-grid">
 
-  <p>Or just message us on WhatsApp: <a href="https://wa.me/213792556748">Chat with us</a></p>
+
+        <!-- Windows -->
+
+        <div class="product-option">
+
+          <input
+            type="radio"
+            id="windows"
+            name="software"
+            value="windows"
+            required
+          >
+
+          <label for="windows">
+            <img
+              src="images/windows-card.png"
+              alt="Windows License"
+            >
+          </label>
+
+        </div>
+
+
+        <!-- Office -->
+
+        <div class="product-option">
+
+          <input
+            type="radio"
+            id="office"
+            name="software"
+            value="office"
+          >
+
+          <label for="office">
+            <img
+              src="images/office-card.png"
+              alt="Microsoft Office License"
+            >
+          </label>
+
+        </div>
+
+      </div>
+
+
+      <!-- Form Fields -->
+
+      <div class="form-fields">
+
+        <label for="edition">
+          Edition / Version
+        </label>
+
+        <select
+          id="edition"
+          name="edition"
+          required
+        >
+          <option value="" disabled selected>
+            Choose an edition
+          </option>
+
+          <option value="win10-home">
+            Windows 10 Home
+          </option>
+
+          <option value="win10-pro">
+            Windows 10 Pro
+          </option>
+
+          <option value="win11-home">
+            Windows 11 Home
+          </option>
+
+          <option value="win11-pro">
+            Windows 11 Pro
+          </option>
+
+          <option value="office2021">
+            Office 2021
+          </option>
+
+          <option value="office365">
+            Microsoft 365
+          </option>
+        </select>
+
+
+        <label for="notes">
+          Notes
+        </label>
+
+        <textarea
+          id="notes"
+          name="notes"
+          placeholder="e.g. Which PC this is for, current Windows version if upgrading"
+        ></textarea>
+
+
+        <label for="payment-method">
+          Payment Method
+        </label>
+
+        <select
+          id="payment-method"
+          name="payment-method"
+          required
+        >
+          <option value="" disabled selected>
+            Choose a payment method
+          </option>
+
+          <option value="ccp">
+            CCP
+          </option>
+
+          <option value="baridimob">
+            BaridiMob
+          </option>
+
+          <option value="visa">
+            Visa
+          </option>
+        </select>
+
+
+        <label for="quantity">
+          Quantity
+        </label>
+
+        <input
+          type="number"
+          id="quantity"
+          name="quantity"
+          min="1"
+          value="1"
+          required
+        >
+
+
+        <label for="email">
+          Your Email
+        </label>
+
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@example.com"
+          required
+        >
+
+
+        <button type="submit">
+          Send Request
+        </button>
+
+      </div>
+
+    </form>
+
+  </main>
+
+
+  <a
+    href="https://wa.me/213792556748"
+    class="floating-contact"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    💬 Chat with us
+  </a>
 
 </body>
 </html>

@@ -1,0 +1,1112 @@
+/* =========================================================
+   GALACTIC VAULT
+   Main Stylesheet
+========================================================= */
+
+
+/* ---------- Fonts ---------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+
+/* =========================================================
+   VARIABLES
+========================================================= */
+
+:root {
+  --bg: #0d1128;
+  --surface: #171b3a;
+  --surface-hover: #1c2145;
+  --surface-border: #2a2f5c;
+
+  --blue: #4d9fff;
+  --purple: #a855f7;
+
+  --text: #e9e6f5;
+  --text-muted: #9b93b0;
+
+  --input-bg: #111631;
+
+  --radius: 14px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   BODY
+========================================================= */
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+h1,
+h2,
+h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+a {
+  color: var(--blue);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--purple);
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 20px 24px;
+}
+
+header::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    var(--blue),
+    var(--purple)
+  );
+}
+
+header > a {
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  display: block;
+  width: auto;
+  height: 36px;
+}
+
+
+/* ---------- Navigation ---------- */
+
+header nav ul {
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+
+  list-style: none;
+}
+
+header nav a {
+  color: var(--text);
+
+  font-size: 0.95rem;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+header nav a:hover {
+  color: var(--blue);
+}
+
+
+/* =========================================================
+   GENERAL CONTAINER
+========================================================= */
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding: 42px 24px 120px;
+}
+
+.container > h1 {
+  margin-bottom: 8px;
+
+  font-size: 2.4rem;
+}
+
+.container > p {
+  margin-bottom: 18px;
+
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+
+/* =========================================================
+   GRADIENT TEXT
+========================================================= */
+
+.gradient-text {
+  background: linear-gradient(
+    90deg,
+    var(--blue),
+    var(--purple)
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+}
+
+
+/* =========================================================
+   INSTRUCTIONS
+========================================================= */
+
+.container > ol {
+  margin: 0 0 28px 22px;
+
+  color: var(--text-muted);
+}
+
+.container > ol li {
+  margin-bottom: 5px;
+  padding-left: 4px;
+}
+
+
+/* =========================================================
+   SMALL NOTES
+========================================================= */
+
+.container > p small {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+}
+
+
+/* =========================================================
+   PRODUCT FORM
+========================================================= */
+
+.product-form {
+  width: 100%;
+}
+
+
+/* =========================================================
+   PRODUCT GRID
+========================================================= */
+
+.product-grid {
+  display: grid;
+
+  width: 100%;
+
+  margin: 0 auto 32px;
+
+  gap: 18px;
+}
+
+
+/* =========================================================
+   PRODUCT OPTION
+========================================================= */
+
+.product-option {
+  min-width: 0;
+}
+
+
+/* ---------- Hide radio buttons ---------- */
+
+.product-option input[type="radio"] {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  opacity: 0;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   PRODUCT CARD
+========================================================= */
+
+.product-option label {
+  display: block;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  background: var(--surface);
+
+  border: 2px solid var(--surface-border);
+  border-radius: var(--radius);
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.product-option label:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(77, 159, 255, 0.65);
+
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================================================
+   SELECTED PRODUCT
+========================================================= */
+
+.product-option input[type="radio"]:checked + label {
+  border-color: var(--blue);
+
+  box-shadow:
+    0 0 0 2px rgba(77, 159, 255, 0.12),
+    0 10px 30px rgba(77, 159, 255, 0.15);
+}
+
+
+/* =========================================================
+   PRODUCT IMAGES
+========================================================= */
+
+.product-option label img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  margin: 0;
+}
+
+
+/* =========================================================
+   ACCOUNTS
+========================================================= */
+
+.accounts-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  max-width: 1000px;
+}
+
+.accounts-grid .product-option label {
+  border-radius: 14px;
+}
+
+
+/*
+   Steam and Epic banners already have their own
+   wide proportions.
+
+   DO NOT force an aspect ratio here.
+*/
+
+.accounts-grid .product-option img {
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   SUBSCRIPTIONS
+========================================================= */
+
+.subscription-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  max-width: 1000px;
+}
+
+.subscription-grid .product-option img {
+  width: 100%;
+
+  aspect-ratio: 800 / 532;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   GIFT CARDS
+========================================================= */
+
+/*
+   Gift cards are intentionally PORTRAIT.
+
+   They do NOT use the subscription landscape ratio.
+*/
+
+.giftcard-grid {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+
+  max-width: 1000px;
+
+  align-items: start;
+  justify-content: center;
+}
+
+.giftcard-grid .product-option {
+  display: flex;
+  justify-content: center;
+}
+
+.giftcard-grid .product-option label {
+  width: 100%;
+  max-width: 170px;
+
+  border-radius: 14px;
+
+  background: #111631;
+}
+
+
+/*
+   Preserve the real portrait proportions
+   of the gift card images.
+*/
+
+.giftcard-grid .product-option img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  aspect-ratio: 750 / 1050;
+
+  object-fit: cover;
+}
+
+
+/* ---------- Gift card hover ---------- */
+
+.giftcard-grid .product-option label:hover {
+  transform: translateY(-4px);
+
+  border-color: rgba(77, 159, 255, 0.7);
+
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ---------- Selected gift card ---------- */
+
+.giftcard-grid
+.product-option
+input[type="radio"]:checked
++ label {
+  border-color: var(--blue);
+
+  box-shadow:
+    0 0 0 2px rgba(77, 159, 255, 0.12),
+    0 12px 30px rgba(77, 159, 255, 0.18);
+}
+
+
+/* =========================================================
+   SOFTWARE
+========================================================= */
+
+.software-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  max-width: 700px;
+}
+
+.software-grid .product-option img {
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   FORM FIELDS
+========================================================= */
+
+.form-fields {
+  width: 100%;
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 9px;
+}
+
+
+/* ---------- Labels ---------- */
+
+.form-fields > label {
+  margin-top: 10px;
+
+  color: var(--text);
+
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   SELECT / INPUT / TEXTAREA
+========================================================= */
+
+.form-fields select,
+.form-fields input[type="number"],
+.form-fields input[type="email"],
+.form-fields textarea {
+  width: 100%;
+
+  min-height: 46px;
+
+  padding: 12px 14px;
+
+  background: var(--input-bg);
+
+  border: 1px solid var(--surface-border);
+  border-radius: 10px;
+
+  outline: none;
+
+  color: var(--text);
+
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.form-fields select {
+  cursor: pointer;
+}
+
+.form-fields select:focus,
+.form-fields input[type="number"]:focus,
+.form-fields input[type="email"]:focus,
+.form-fields textarea:focus {
+  background: #141a3b;
+
+  border-color: var(--blue);
+
+  box-shadow:
+    0 0 0 3px rgba(77, 159, 255, 0.1);
+}
+
+.form-fields input::placeholder,
+.form-fields textarea::placeholder {
+  color: #68627e;
+}
+
+
+/* ---------- Textarea ---------- */
+
+.form-fields textarea {
+  min-height: 110px;
+
+  resize: vertical;
+}
+
+
+/* =========================================================
+   FORM NOTES
+========================================================= */
+
+.form-fields p {
+  margin: 4px 0;
+
+  color: var(--text-muted);
+
+  font-size: 0.84rem;
+}
+
+.form-fields p small {
+  color: var(--text-muted);
+
+  font-size: 0.82rem;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.form-fields button {
+  width: 100%;
+
+  min-height: 48px;
+
+  margin-top: 14px;
+  padding: 13px 20px;
+
+  background: linear-gradient(
+    90deg,
+    var(--blue),
+    var(--purple)
+  );
+
+  border: none;
+  border-radius: 10px;
+
+  color: #fff;
+
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-fields button:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 25px rgba(77, 159, 255, 0.25);
+}
+
+.form-fields button:active {
+  transform: translateY(0);
+}
+
+
+/* =========================================================
+   FLOATING WHATSAPP
+========================================================= */
+
+.floating-contact {
+  position: fixed;
+
+  right: 24px;
+  bottom: 24px;
+
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 14px 22px;
+
+  background: linear-gradient(
+    90deg,
+    var(--blue),
+    var(--purple)
+  );
+
+  border-radius: 50px;
+
+  color: #fff;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  box-shadow:
+    0 4px 20px rgba(77, 159, 255, 0.35);
+
+  transition:
+    transform 0.2s ease;
+}
+
+.floating-contact:hover {
+  transform: scale(1.05);
+
+  color: #fff;
+}
+
+
+/* =========================================================
+   HOME PAGE
+========================================================= */
+
+.home-page {
+  padding-top: 42px;
+}
+
+.home-intro {
+  margin-bottom: 38px;
+}
+
+.home-intro h1 {
+  margin-bottom: 10px;
+}
+
+.home-intro p {
+  max-width: 850px;
+
+  color: var(--text-muted);
+}
+
+
+/* ---------- Home Banner ---------- */
+
+.home-banner {
+  width: 100%;
+
+  overflow: hidden;
+
+  background: var(--surface);
+
+  border: 1px solid var(--surface-border);
+  border-radius: 16px;
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.25);
+}
+
+.home-banner img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 15px;
+}
+
+
+/* =========================================================
+   LINKS PAGE
+========================================================= */
+
+.links-page {
+  width: 100%;
+  max-width: 750px;
+
+  margin: 0 auto;
+
+  padding: 60px 24px 110px;
+}
+
+.links-intro {
+  margin-bottom: 42px;
+
+  text-align: center;
+}
+
+.links-label {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: var(--blue);
+
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+.links-intro h1 {
+  margin-bottom: 10px;
+
+  font-size: 2.8rem;
+}
+
+.links-intro p {
+  color: var(--text-muted);
+
+  font-size: 1rem;
+}
+
+.links-options {
+  display: flex;
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  width: 100%;
+
+  padding: 18px 20px;
+
+  background: var(--surface);
+
+  border: 1px solid var(--surface-border);
+  border-radius: 14px;
+
+  color: var(--text);
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-2px);
+
+  background-color: var(--surface-hover);
+
+  border-color: var(--blue);
+
+  color: var(--text);
+
+  box-shadow:
+    0 8px 25px rgba(77, 159, 255, 0.08);
+}
+
+.link-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  width: 48px;
+  height: 48px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(77, 159, 255, 0.15),
+    rgba(168, 85, 247, 0.15)
+  );
+
+  border-radius: 12px;
+
+  font-size: 1.3rem;
+}
+
+.link-content {
+  flex: 1;
+}
+
+.link-content h2 {
+  margin-bottom: 2px;
+
+  font-size: 1rem;
+}
+
+.link-content p {
+  color: var(--text-muted);
+
+  font-size: 0.82rem;
+}
+
+.link-arrow {
+  color: var(--blue);
+
+  font-size: 1.2rem;
+
+  transition:
+    transform 0.2s ease;
+}
+
+.link-card:hover .link-arrow {
+  transform: translateX(4px);
+}
+
+.link-card.coming-soon {
+  opacity: 0.6;
+
+  cursor: default;
+}
+
+.link-card.coming-soon:hover {
+  transform: none;
+
+  background-color: var(--surface);
+
+  border-color: var(--surface-border);
+
+  box-shadow: none;
+}
+
+.link-status {
+  color: var(--text-muted);
+
+  font-size: 0.75rem;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .subscription-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .giftcard-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .giftcard-grid .product-option label {
+    max-width: 175px;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL TABLET
+========================================================= */
+
+@media (max-width: 750px) {
+
+  header {
+    gap: 20px;
+  }
+
+  header nav ul {
+    gap: 18px;
+  }
+
+  .accounts-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 600px;
+  }
+
+  .giftcard-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    max-width: 600px;
+  }
+
+  .software-grid {
+    max-width: 600px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  header {
+    flex-direction: column;
+
+    padding: 18px 16px;
+
+    gap: 16px;
+  }
+
+  header nav ul {
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 10px 16px;
+  }
+
+  header nav a {
+    font-size: 0.84rem;
+  }
+
+
+  .container {
+    padding: 30px 18px 120px;
+  }
+
+  .container > h1 {
+    font-size: 2rem;
+  }
+
+  .container > p {
+    font-size: 0.92rem;
+  }
+
+
+  /* Subscription cards */
+
+  .subscription-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 500px;
+  }
+
+
+  /* Gift cards remain portrait */
+
+  .giftcard-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    max-width: 390px;
+
+    gap: 14px;
+  }
+
+  .giftcard-grid .product-option label {
+    max-width: 180px;
+  }
+
+
+  /* Software */
+
+  .software-grid {
+    grid-template-columns: 1fr;
+
+    max-width: 500px;
+  }
+
+
+  /* Accounts */
+
+  .accounts-grid {
+    gap: 14px;
+  }
+
+
+  /* Form */
+
+  .form-fields {
+    max-width: 100%;
+  }
+
+
+  /* Home */
+
+  .home-page {
+    padding-top: 32px;
+  }
+
+  .home-intro {
+    margin-bottom: 28px;
+  }
+
+  .home-intro h1 {
+    font-size: 2.3rem;
+  }
+
+  .home-banner {
+    border-radius: 12px;
+  }
+
+  .home-banner img {
+    border-radius: 11px;
+  }
+
+
+  /* Floating button */
+
+  .floating-contact {
+    right: 16px;
+    bottom: 16px;
+
+    padding: 12px 18px;
+
+    font-size: 0.9rem;
+  }
+
+
+  /* Links */
+
+  .links-page {
+    padding: 45px 20px 110px;
+  }
+
+  .links-intro h1 {
+    font-size: 2.3rem;
+  }
+
+  .link-card {
+    padding: 16px;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  header nav ul {
+    gap: 8px 12px;
+  }
+
+  header nav a {
+    font-size: 0.8rem;
+  }
+
+  .giftcard-grid {
+    gap: 10px;
+  }
+
+  .floating-contact {
+    right: 12px;
+    bottom: 12px;
+
+    padding: 11px 15px;
+  }
+
+}
